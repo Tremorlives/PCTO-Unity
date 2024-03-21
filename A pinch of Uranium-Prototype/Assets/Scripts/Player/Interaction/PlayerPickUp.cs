@@ -16,7 +16,16 @@ public class PlayerPickUp : MonoBehaviour
     ObjectGrabbable currentObjectGrabbable;
     private void Update()
     {
-        
+        if(currentObjectGrabbable == null)
+        {
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out RaycastHit objHit, pickUpDistance, pickupLayermask))
+            {
+                if (objHit.collider.TryGetComponent<ObjectGrabbable>(out ObjectGrabbable selectedObject))
+                {
+                    selectedObject.SelectForThisFrame();
+                }
+            }
+        }
         if (Input.GetKeyDown(pickupKey))
         {
             // check if the player is holding something
@@ -25,9 +34,6 @@ public class PlayerPickUp : MonoBehaviour
                 // if not grab the facing object
                 if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward,out RaycastHit hit,pickUpDistance,pickupLayermask))
                 {
-                    Debug.Log("Hit: " + hit.collider.name);
-                    Debug.DrawRay(Camera.main.transform.position, hit.point- Camera.main.transform.position, Color.green,1f);
-                    
                     if (hit.collider.TryGetComponent<ObjectGrabbable>(out currentObjectGrabbable))
                     {
                         currentObjectGrabbable.Grab(objectGrabPointTransform);
