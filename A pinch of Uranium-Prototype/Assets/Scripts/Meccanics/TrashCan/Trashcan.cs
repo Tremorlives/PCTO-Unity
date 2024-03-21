@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -20,7 +21,7 @@ public class Trashcan : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<JunkItem>(out JunkItem item))
         {
-            if (validIDs.Contains(item.itemID))
+            if (validIDs.Intersect(item.itemIDs).Any())
             {
                 validItemList.Add(other.gameObject);
                 currentItemAmount++;
@@ -43,13 +44,13 @@ public class Trashcan : MonoBehaviour
     void UpdateText()
     {
         Debug.Log(validItemList.Count);
-        if(itemsNeeded >= validItemList.Count)
+        if(itemsNeeded > validItemList.Count)
         {
             displayText.text = validItemList.Count + " / " + itemsNeeded;
         }
         else
         {
-            displayText.text = "Trashcan is full";
+            displayText.text = "FULL!";
         }
     }
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class JunkItem : MonoBehaviour
 {
-    public string itemID = "void";
+    public List<string> itemIDs;
 }
