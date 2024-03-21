@@ -319,8 +319,8 @@
 -r:"/Applications/Unity/Hub/Editor/2021.3.23f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.3.23f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"/Applications/Unity/Hub/Editor/2021.3.23f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll"
--r:"/Users/robertogrosso/Desktop/ProgettiUnity/A pinch of Uranium-Prototype/Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/lib/ReportGenerator/ReportGeneratorMerged.dll"
--r:"/Users/robertogrosso/Desktop/ProgettiUnity/A pinch of Uranium-Prototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"/Users/robertogrosso/Desktop/GitHubRepos/PCTO-Unity/A pinch of Uranium-Prototype/Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/lib/ReportGenerator/ReportGeneratorMerged.dll"
+-r:"/Users/robertogrosso/Desktop/GitHubRepos/PCTO-Unity/A pinch of Uranium-Prototype/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
@@ -353,6 +353,7 @@
 "Assets/AurynSky/Gems Ultimate Pack/Scripts/AnimationScript.cs"
 "Assets/QuickOutline/Scripts/Outline.cs"
 "Assets/Scripts/Interfaces/Interactions/IInteractable.cs"
+"Assets/Scripts/JunkItem.cs"
 "Assets/Scripts/ObjectGrabbable.cs"
 "Assets/Scripts/Player/Controller/FPSController.cs"
 "Assets/Scripts/Player/Interaction/Chest.cs"
@@ -360,6 +361,7 @@
 "Assets/Scripts/Player/Interaction/PlayerPickUp.cs"
 "Assets/Scripts/Player/PlayerInteract.cs"
 "Assets/Scripts/UI_FaceCamera.cs"
+"Assets/Trashcan.cs"
 -langversion:9.0
 
 /deterministic
