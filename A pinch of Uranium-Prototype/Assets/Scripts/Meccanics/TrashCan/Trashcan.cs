@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Collider))]
 public class Trashcan : MonoBehaviour
@@ -19,6 +20,7 @@ public class Trashcan : MonoBehaviour
     [SerializeField] GameObject itemDrop;
     [SerializeField] Transform spawnPoint;
     [SerializeField] Quaternion spawnRotation;
+    [SerializeField] UnityEvent OnComplete;
     List<GameObject> validItemList;
     int currentItemAmount = 0;
     private void Awake()
@@ -74,6 +76,7 @@ public class Trashcan : MonoBehaviour
         {
             Instantiate(itemDrop, spawnPoint.transform.position, spawnRotation);
         }
+        OnComplete.Invoke();
         Destroy(this.gameObject);
     }
 }
