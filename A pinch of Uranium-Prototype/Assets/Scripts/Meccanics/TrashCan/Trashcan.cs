@@ -14,8 +14,11 @@ public class Trashcan : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayText;
 
     [Header("On Completed")]
+    [SerializeField] bool dropsItem;
     [SerializeField] GameObject completeVFX;
     [SerializeField] GameObject itemDrop;
+    [SerializeField] Transform spawnPoint;
+    [SerializeField] Quaternion spawnRotation;
     List<GameObject> validItemList;
     int currentItemAmount = 0;
     private void Awake()
@@ -56,8 +59,6 @@ public class Trashcan : MonoBehaviour
         }
         else
         {
-            displayText.text = "FULL!";
-            // Drop the object and summon an effect
             CompleteTrashCan();
         }
     }
@@ -65,8 +66,14 @@ public class Trashcan : MonoBehaviour
     private void CompleteTrashCan()
     {
         Instantiate(completeVFX, transform.position, Quaternion.identity);
-        GameObject drop = Instantiate(itemDrop, transform.position, Quaternion.identity);
-        Destroy(this);
-        Debug.Log("Destroyed Trash Can!");
+        foreach(var item in validItemList)
+        {
+            Destroy(item.gameObject);
+        }
+        if (dropsItem)
+        {
+            Instantiate(itemDrop, spawnPoint.transform.position, spawnRotation);
+        }
+        Destroy(this.gameObject);
     }
 }
