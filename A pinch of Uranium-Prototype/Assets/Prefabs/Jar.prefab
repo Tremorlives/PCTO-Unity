@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5162281595466610348}
   - component: {fileID: 5574718844522758575}
   - component: {fileID: 2731969908178001327}
+  - component: {fileID: -8858601373809650592}
   m_Layer: 7
   m_Name: Jar
   m_TagString: Untagged
@@ -164,3 +165,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 904a2940f7f4c42f8b57e68619ad5e35, type: 3}
+--- !u!114 &-8858601373809650592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503454807108939434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4efce6908672f4790b93fc3186dccd22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ID: JAR
+  toInstantiate: {fileID: 1827444311520995857, guid: 8577791565ead4efea82e2821a013614, type: 3}
+  rotOffset: {x: -0.70710677, y: 0, z: 0, w: 0.70710677}

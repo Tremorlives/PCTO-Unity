@@ -54,7 +54,6 @@ public class Trashcan : MonoBehaviour
 
     void UpdateText()
     {
-        Debug.Log(validItemList.Count);
         if(itemsNeeded > validItemList.Count)
         {
             displayText.text = validItemList.Count + " / " + itemsNeeded;
